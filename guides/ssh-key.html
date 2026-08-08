@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как создать SSH-ключ — Курс C++</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Курс C++</h1>
+      <nav>
+        <a href="../index.html">Задания</a>
+        <a href="../presentations.html">Презентации</a>
+        <a href="ssh-key.html">SSH-ключ</a>
+        <a href="git-clone.html">Клонирование</a>
+        <a href="git-basics.html">Git с нуля</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="../index.html">← Назад к заданиям</a>
+    <article class="guide">
+      <h2>Как создать SSH-ключ и подключить его к GitHub</h2>
+      <p>
+        SSH-ключ — это способ доказать GitHub, что это именно ты, без ввода пароля каждый раз.
+        Ключ состоит из двух частей: приватной (никому не показываем, она остаётся у тебя на компьютере)
+        и публичной (её мы добавим в настройки GitHub).
+      </p>
+
+      <h3>Шаг 1. Открой терминал</h3>
+      <p>
+        <strong>На Mac:</strong> найди приложение «Терминал» (Terminal) через Spotlight (⌘ + Пробел, набери «Terminal»).<br />
+        <strong>На Windows:</strong> открой «Git Bash» (устанавливается вместе с Git) или PowerShell.
+      </p>
+
+      <h3>Шаг 2. Сгенерируй ключ</h3>
+      <p>Введи команду:</p>
+      <pre><code>ssh-keygen</code></pre>
+      <p>
+        На все вопросы можно просто нажимать <code>Enter</code>, чтобы оставить настройки по умолчанию
+        (в том числе можно оставить пустой пароль — просто ещё раз нажми Enter).
+      </p>
+
+      <div class="tip">
+        Ключ сохранится в папку <code>~/.ssh/</code>. Файл <code>id_rsa</code> — приватный (секретный),
+        файл <code>id_rsa.pub</code> — публичный (его и будем добавлять на GitHub). В конце команда сама
+        напечатает путь, куда сохранила ключ — можно свериться с ним.
+      </div>
+
+      <h3>Шаг 3. Скопируй публичный ключ</h3>
+      <p><strong>На Mac:</strong></p>
+      <pre><code>pbcopy < ~/.ssh/id_rsa.pub</code></pre>
+      <p><strong>На Windows (Git Bash):</strong></p>
+      <pre><code>cat ~/.ssh/id_rsa.pub | clip</code></pre>
+      <p>Ключ скопирован в буфер обмена — можно вставлять (Ctrl+V / ⌘+V).</p>
+
+      <h3>Шаг 4. Добавь ключ на GitHub</h3>
+      <ol>
+        <li>Зайди на <a href="https://github.com/settings/keys" target="_blank" rel="noopener">github.com/settings/keys</a></li>
+        <li>Нажми «New SSH key»</li>
+        <li>В поле «Title» напиши название, например «Мой ноутбук»</li>
+        <li>В поле «Key» вставь скопированный ключ (Ctrl+V / ⌘+V)</li>
+        <li>Нажми «Add SSH key»</li>
+      </ol>
+
+      <h3>Шаг 5. Проверь, что всё работает</h3>
+      <pre><code>ssh -T git@github.com</code></pre>
+      <p>
+        Если увидишь сообщение вида «Hi username! You've successfully authenticated...» — всё готово,
+        можно переходить к <a href="git-clone.html">клонированию репозитория</a>.
+      </p>
+
+      <div class="tip warn">
+        Если появится вопрос «Are you sure you want to continue connecting?» — смело пиши <code>yes</code> и жми Enter.
+      </div>
+    </article>
+  </main>
+
+  <footer>Курс C++ · детская IT-школа</footer>
+</body>
+</html>

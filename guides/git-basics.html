@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Git с нуля — Курс C++</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Курс C++</h1>
+      <nav>
+        <a href="../index.html">Задания</a>
+        <a href="../presentations.html">Презентации</a>
+        <a href="ssh-key.html">SSH-ключ</a>
+        <a href="git-clone.html">Клонирование</a>
+        <a href="git-basics.html">Git с нуля</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="../index.html">← Назад к заданиям</a>
+    <article class="guide">
+      <h2>Git с нуля: как сохранить и сдать домашку</h2>
+      <p>
+        Git запоминает историю изменений твоего кода. Чтобы сдать домашнее задание,
+        нужно сохранить изменения (коммит) и отправить их на GitHub (пуш).
+      </p>
+
+      <h3>Проверить, что изменилось</h3>
+      <pre><code>git status</code></pre>
+      <p>Покажет, какие файлы ты изменил или добавил.</p>
+
+      <h3>Добавить файлы в коммит</h3>
+      <pre><code>git add .</code></pre>
+      <p>Команда <code>git add .</code> добавляет вообще все изменённые файлы. Можно указать конкретный файл: <code>git add main.cpp</code>.</p>
+
+      <h3>Сохранить изменения (коммит)</h3>
+      <pre><code>git commit -m "Решил задачу про циклы"</code></pre>
+      <p>После <code>-m</code> пиши короткое понятное описание того, что сделал.</p>
+
+      <h3>Отправить изменения на GitHub</h3>
+      <pre><code>git push</code></pre>
+      <p>После этого изменения появятся в репозитории на GitHub — задание сдано.</p>
+
+      <div class="tip">
+        Обычный порядок действий: <code>git status</code> → <code>git add .</code> → <code>git commit -m "..."</code> → <code>git push</code>.
+        Так можно делать много раз за день, каждый раз, когда что-то доделал.
+      </div>
+
+      <h3>Забрать новые изменения (если что-то поменяли в задании)</h3>
+      <pre><code>git pull</code></pre>
+
+      <div class="tip warn">
+        Если <code>git push</code> ругается на ошибку — не паникуй и не удаляй папку. Сделай скриншот ошибки
+        и покажи преподавателю.
+      </div>
+    </article>
+  </main>
+
+  <footer>Курс C++ · детская IT-школа</footer>
+</body>
+</html>

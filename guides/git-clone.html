@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Как склонировать репозиторий — Курс C++</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <h1>Курс C++</h1>
+      <nav>
+        <a href="../index.html">Задания</a>
+        <a href="../presentations.html">Презентации</a>
+        <a href="ssh-key.html">SSH-ключ</a>
+        <a href="git-clone.html">Клонирование</a>
+        <a href="git-basics.html">Git с нуля</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="../index.html">← Назад к заданиям</a>
+    <article class="guide">
+      <h2>Как получить задание и склонировать его себе</h2>
+      <p>
+        Репозиторий с заданием, который дал преподаватель, — общий для всех учеников, и писать
+        (пушить) в него напрямую нельзя. Поэтому сначала нужно сделать <strong>свою собственную копию</strong>
+        репозитория на GitHub, а уже её склонировать к себе на компьютер. Тогда всё, что запушишь,
+        будет попадать в твою копию, без конфликтов с другими учениками.
+      </p>
+
+      <div class="tip warn">
+        Перед этим шагом должен быть настроен SSH-ключ — см. <a href="ssh-key.html">гайд про SSH-ключ</a>.
+      </div>
+
+      <h3>Шаг 1. Создай свою копию репозитория</h3>
+      <p>
+        Открой ссылку на репозиторий задания (её даёт преподаватель). Вместо обычной кнопки «Code»
+        там будет зелёная кнопка <strong>«Use this template»</strong> — нажми её.
+      </p>
+      <ol>
+        <li>В диалоге «Create a new repository» выбери себя в качестве владельца (Owner)</li>
+        <li>Введи любое название, например <code>day01-hello-cpp</code></li>
+        <li>Нажми «Create repository from template»</li>
+      </ol>
+      <p>
+        GitHub создаст новый репозиторий у тебя в аккаунте с теми же файлами — это уже твоя личная копия.
+      </p>
+
+      <h3>Шаг 2. Скопируй SSH-ссылку своей копии</h3>
+      <p>
+        На странице <strong>своего</strong> нового репозитория нажми зелёную кнопку «Code», выбери вкладку «SSH»
+        и скопируй ссылку — она выглядит примерно так:
+      </p>
+      <pre><code>git@github.com:твой-аккаунт/day01-hello-cpp.git</code></pre>
+
+      <h3>Шаг 3. Открой терминал в папке, где хочешь хранить задания</h3>
+      <p>Например, создай папку <code>cpp-course</code> и перейди в неё:</p>
+      <pre><code>mkdir cpp-course
+cd cpp-course</code></pre>
+
+      <h3>Шаг 4. Склонируй свою копию</h3>
+      <pre><code>git clone git@github.com:твой-аккаунт/day01-hello-cpp.git</code></pre>
+      <p>
+        Появится папка с названием репозитория — внутри уже будут все файлы задания.
+      </p>
+
+      <h3>Шаг 5. Перейди в папку с проектом</h3>
+      <pre><code>cd day01-hello-cpp</code></pre>
+      <p>Теперь можно открывать файлы в редакторе кода (например, VS Code: <code>code .</code>) и начинать работу.</p>
+
+      <div class="tip">
+        Так как это уже твоя копия, <code>git push</code> будет отправлять изменения именно в неё —
+        никаких дополнительных настроек не нужно. Как коммитить и пушить — смотри в гайде
+        <a href="git-basics.html">«Git с нуля»</a>.
+      </div>
+    </article>
+  </main>
+
+  <footer>Курс C++ · детская IT-школа</footer>
+</body>
+</html>
