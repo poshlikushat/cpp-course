@@ -25,15 +25,18 @@ function renderPresentations() {
   const sorted = [...PRESENTATIONS].sort((a, b) => a.day - b.day);
 
   container.innerHTML = sorted
-    .map(
-      (p) => `
+    .map((p) => {
+      const isPdf = p.url.toLowerCase().endsWith(".pdf");
+      const attrs = isPdf ? 'download target="_blank"' : 'target="_blank" rel="noopener"';
+      const label = isPdf ? "Скачать PDF" : "Открыть презентацию";
+      return `
     <div class="card">
       <span class="day-badge">День ${p.day}</span>
       <h3>${p.title}</h3>
-      <a class="btn" href="${p.url}" target="_blank" rel="noopener">Открыть презентацию</a>
+      <a class="btn" href="${p.url}" ${attrs}>${label}</a>
     </div>
-  `
-    )
+  `;
+    })
     .join("");
 }
 

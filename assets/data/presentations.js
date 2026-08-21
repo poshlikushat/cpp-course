@@ -4,8 +4,13 @@
 // url   — ссылка на презентацию (Google Slides, PDF и т.п.)
 const PRESENTATIONS = [
   {
-    day: 1,
-    title: "День 1: Знакомство с C++",
-    url: "https://example.com/day01-slides",
+    day: 0,
+    title: "День 0: Введение в C++",
+    url: "assets/presentations/day00.pdf",
   },
+  {
+    day: 1,
+    title: "День 1: Основы C++",
+    url: "assets/presentations/day01.pdf",
+  }
 ];
