@@ -12,5 +12,10 @@ const PRESENTATIONS = [
     day: 1,
     title: "День 1: Основы C++",
     url: "assets/presentations/day01.pdf",
+  },
+  {
+    day: 2,
+    title: "День 2: Функции массивы и указатели",
+    url: "assets/presentations/day02.pdf",
   }
 ];
