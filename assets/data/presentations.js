@@ -20,7 +20,7 @@ const PRESENTATIONS = [
   },
   {
     day: 3,
-    title: "День 2: Работа с массивами + строки",
+    title: "День 3: Работа с массивами + строки",
     url: "assets/presentations/day03.pdf",
   }
 ];
