@@ -17,5 +17,10 @@ const PRESENTATIONS = [
     day: 2,
     title: "День 2: Функции массивы и указатели",
     url: "assets/presentations/day02.pdf",
+  },
+  {
+    day: 3,
+    title: "День 2: Работа с массивами + строки",
+    url: "assets/presentations/day03.pdf",
   }
 ];
