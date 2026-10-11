@@ -9,5 +9,11 @@ const DAYS = [
     title: "День 2: Функции массивы и указатели",
     description: "Очень классные невероятные задания",
     repoUrl: "https://github.com/prog-for-school/day02",
+  },
+  {
+    day: 4,
+    title: "День 4: Динамическая память, стек",
+    description: "Очень классные невероятные космические и арзиологические задания",
+    repoUrl: "https://github.com/prog-for-school/day04",
   }
 ];
