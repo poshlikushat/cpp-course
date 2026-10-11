@@ -22,5 +22,10 @@ const PRESENTATIONS = [
     day: 3,
     title: "День 3: Работа с массивами + строки",
     url: "assets/presentations/day03.pdf",
+  },
+  {
+    day: 4,
+    title: "День 4: Динамическая память",
+    url: "assets/presentations/day04.pdf"
   }
 ];
