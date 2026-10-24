@@ -27,5 +27,10 @@ const PRESENTATIONS = [
     day: 4,
     title: "День 4: Динамическая память",
     url: "assets/presentations/day04.pdf"
+  },
+  {
+    day: 6,
+    title: "День 6: Связный список",
+    url: "assets/presentations/day06.pdf"
   }
 ];
