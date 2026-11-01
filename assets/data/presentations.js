@@ -32,5 +32,10 @@ const PRESENTATIONS = [
     day: 6,
     title: "День 6: Связный список",
     url: "assets/presentations/day06.pdf"
+  },
+  {
+    day: 7,
+    title: "День 7: Деревья",
+    url: "assets/presentations/day07.pdf"
   }
 ];
